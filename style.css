@@ -1,0 +1,104 @@
+
+* {
+    box-sizing: border-box;
+  }
+  
+  .navbar{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    position: fixed; 
+    /*fixed position for all pages*/
+    width: 100%;
+    z-index: 999; 
+     /*Z Index ( z-index ) is a CSS property that defines the order of overlapping HTML elements. 
+     Elements with a higher index will be placed on top of elements with a lower index.*/
+}
+
+body{
+    display:block;
+}
+html {
+    scroll-padding-top: 3.5rem;
+      scroll-behavior: smooth;
+      /*The scroll-padding-top property defines offsets for the top of the optimal viewing region of the scrollport */
+
+  }
+.img-fluid {
+    max-width:250px;
+        /*I dont need 100% image on my screen, so 250px is perfect size of photo*/
+     height: auto;
+     border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  
+}
+
+header {
+  padding-top: 10px;
+      /*padding of the header background */
+  padding-bottom:10px;
+ /*gradient taken from https://uigradients.com/#Jaipur*/
+ background: #EFEFBB;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #D4D3DD, #EFEFBB);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #D4D3DD, #EFEFBB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+section {
+  padding-top: 25px;
+  padding-bottom: 60px;
+  background-color:floralwhite ;
+}
+
+.my-5 {
+    margin-top: 3rem!important;
+    margin-bottom:5rem!important;
+}
+.py-5 { /*padding of header */
+    padding-top: auto;
+    padding-bottom: auto;
+}
+
+.container{
+display:flex;
+flex-direction:row;
+flex-wrap:wrap;
+    /*след. строка*/
+justify-content:center; /*horiz */
+align-content:center;  /*vert */
+
+}
+.photo
+{ /*три фото будут меняться в зависимости от размера, от вместимости на экран */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+    grid-template-rows: 1fr ;
+    grid-gap: 10px;
+    justify-items:stretch;
+    align-items:stretch;
+}
+img{
+    max-width: 100%;
+    margin:5px;
+    box-shadow: 1px 2px 4px #888888;
+    transition:all 1s;
+    display: block;
+}
+img:hover{ /*эффект наведения*/
+    transform: scale(1.1);
+    animation:forwards;
+}
+
+.card
+  {
+    display: flex;
+    flex-wrap: wrap;
+    /*Свойство CSS flex-wrap задаёт правила вывода flex-элементов —  в одну строку или в несколько, с переносом блоков.*/
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  footer{
+color: white;
+text-align: center;
+  }
+  
+ 
